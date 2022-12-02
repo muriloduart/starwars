@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 function Home() {
 
-    const [teste, setTest] = useState([])
+    const [aquiEOGet, aquiVaiSeroSet] = useState([])
 
     useEffect(() => {
         console.log("chamou useEffect")
@@ -14,6 +14,8 @@ function Home() {
                 window.bucks = data;
                 setTest(data.data.results);
             
+                aquiVaiSeroSet(['teste', 'dois']) //aqui insere dado
+
         })
         console.log("Murilo")
     }, [])
@@ -63,7 +65,7 @@ function Home() {
 
     // ]
 
-
+    //aqui pegamos 
     return (
         <Container>
             <h1>Films</h1>
